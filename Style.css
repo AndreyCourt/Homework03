@@ -1,7 +1,7 @@
 .content {
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: rgb(122, 155, 163);
+  background-color: rgb(180, 174, 175);
   padding: 20px;
   width: 100%;
 }
@@ -21,4 +21,13 @@
 
 .previous_passwords {
   margin-bottom: 20px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
