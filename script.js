@@ -1,7 +1,11 @@
+//global variables
+var slider = document.getElementById("slider");
+var lengthLabel = document.getElementById("length");
+
 //generate random password
 function generate() {
   //set password length/complexity
-  let complexity = document.getElementById("slider").value;
+  let complexity = slider.value;
 
   //possible password values
   let value =
@@ -20,25 +24,26 @@ function generate() {
   document.getElementById("display").value = password;
 
   //add password to previously generated passwords section
-  document.getElementById("lastpasswords").innerHTML += password + "br  />";
+  document.getElementById("lastpasswords").innerHTML += password + "<br  />";
 }
 
 //set default legth display of 25
-document.getElementById("length").innerHTML = "length: 25";
+lengthLabel.innerHTML = "Length: 25";
 
 //function to set length based on slider position
 document.getElementById("slider").oninput = function () {
-  if (document.getElementById("slider)").value > 0) {
-    document.getElementById("length").innerHTML =
-      "Length: " + document.getElementById("slider").value;
+  if (slider.value > 0) {
+    lengthLabel.innerHTML = "Length: " + slider.value;
   } else {
-    document.getElementById("length").innerHTML = "Length: 1";
+    lengthLabel.innerHTML = "Length: 1";
   }
 };
 
 //function to copy password
 function copyPassword() {
-  document.getElementById("dispaly").Select();
-  document.execCommand("Copy");
+  var display = document.getElementById("display");
+  display.select();
+  display.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
   alert("Password copied to clipboard");
 }
