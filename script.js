@@ -7,13 +7,13 @@ function generate() {
   //set password length/complexity
   let complexity = slider.value;
 
-  //possible password values
+  //possible password outcomes
   let value =
     "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890!@#$%^&*+_()";
 
   let password = "";
 
-  //create for loop to choose password characters
+  //Loop to choose password characters
   for (var i = 0; i <= complexity; i++) {
     password =
       password +
